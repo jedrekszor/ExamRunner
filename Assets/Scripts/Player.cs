@@ -7,18 +7,27 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D rgbd;
     public static bool canJump = true;
+    private Session session;
 
     [SerializeField] private float height;
     // Start is called before the first frame update
     void Start()
     {
         rgbd = GetComponent<Rigidbody2D>();
+        session = GameObject.Find("Session").GetComponent<Session>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            jump();
+        }
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+            session.Move(-1);
         
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+            session.Move(1);
     }
 
     public void jump()
