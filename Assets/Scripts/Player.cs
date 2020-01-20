@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rgbd;
-    private bool canJump = true;
+    public static bool canJump = true;
 
     [SerializeField] private float height;
     // Start is called before the first frame update
@@ -30,11 +30,5 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Floor"))
-        {
-            canJump = true;
-        }
-    }
+    
 }
