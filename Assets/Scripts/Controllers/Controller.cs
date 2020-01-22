@@ -25,4 +25,9 @@ public class Controller : MonoBehaviour
     {
         //WIENER
     }
+
+    public static void Lose()
+    {
+        //LOSER :'(
+    }
 }

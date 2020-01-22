@@ -5,7 +5,6 @@ using UnityEngine;
 public class BlockSpawn : MonoBehaviour
 {
     public List<GameObject> blocks;
-    public List<float> spawns;
     public Transform spawnPoint;
     public float minTime;
     public float maxTime;
@@ -16,7 +15,6 @@ public class BlockSpawn : MonoBehaviour
     
     private IEnumerator Cooldown()
     {
-//        Debug.Log("dupa");
         float sec = Random.Range(minTime, maxTime);
         yield return new WaitForSeconds(sec);
         spawnStuff();
@@ -27,8 +25,8 @@ public class BlockSpawn : MonoBehaviour
         int rand = Random.Range(0, blocks.Count);
         Instantiate(blocks[rand], spawnPoint.transform.position, Quaternion.identity);
 
-        int randSpawn = Random.Range(0, spawns.Count);
-        spawnPoint.transform.position = new Vector2(spawnPoint.position.x, spawns[randSpawn]); 
+        int randSpawn = Random.Range(0, transform.childCount);
+        spawnPoint.transform.position = transform.GetChild(randSpawn).transform.position; 
         StartCoroutine(Cooldown());
     }
 }
