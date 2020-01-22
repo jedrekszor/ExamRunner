@@ -9,6 +9,7 @@ public class PowerUp : MonoBehaviour
     public int tier;
     private float offset;
     private Session session;
+    public float vel;
     
     void Start()
     {
@@ -36,22 +37,26 @@ public class PowerUp : MonoBehaviour
             } break;
         }
 
-        if (!isBuff)
+        if (isBuff)
             offset *= -1;
 
         session = GameObject.Find("Session").GetComponent<Session>();
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             session.Move(offset);
+            //PICKUP SOUND but must be on player since the object is getting destroyed
+            Destroy(gameObject);
         }
     }
 
     private void Update()
     {
+        transform.Translate(Vector3.left * Time.deltaTime * vel);
+        
         if(transform.position.x < -15)
             Destroy(gameObject);
     }
