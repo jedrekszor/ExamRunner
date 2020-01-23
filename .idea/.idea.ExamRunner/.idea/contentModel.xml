@@ -12,6 +12,7 @@
             <e p="Controller.cs" t="Include" />
             <e p="MenuController.cs" t="Include" />
           </e>
+          <e p="Dust.cs" t="Include" />
           <e p="Levitate.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerCollider.cs" t="Include" />

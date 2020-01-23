@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rgbd;
     public static bool canJump = true;
     private Session session;
+    public GameObject dust;
 
     [SerializeField] private float height;
     // Start is called before the first frame update
@@ -35,7 +36,9 @@ public class Player : MonoBehaviour
         if (canJump)
         {
             rgbd.AddForce(new Vector2(0, height), ForceMode2D.Impulse);
+            Instantiate(dust, transform.GetChild(0).position, Quaternion.identity);
             canJump = false;
+//            Debug.Break();
         }
     }
 
