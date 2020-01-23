@@ -5,9 +5,13 @@ using UnityEngine;
 public class BlockSpawn : MonoBehaviour
 {
     public List<GameObject> blocks;
+    public List<GameObject> powerUps;
+    public GameObject ects;
     public Transform spawnPoint;
     public float minTime;
     public float maxTime;
+    public int powerUpRatio;
+    public int ectsRatio;
     void Start()
     {
         StartCoroutine(Cooldown());
@@ -23,7 +27,22 @@ public class BlockSpawn : MonoBehaviour
     private void spawnStuff()
     {
         int rand = Random.Range(0, blocks.Count);
-        Instantiate(blocks[rand], spawnPoint.transform.position, Quaternion.identity);
+        GameObject inst = Instantiate(blocks[rand], spawnPoint.transform.position, Quaternion.identity);
+        Vector3 pos = new Vector3(inst.transform.position.x, inst.transform.position.y + 2, inst.transform.position.z);
+        int powerUpChance = Random.Range(0, powerUpRatio);
+        if (powerUpChance == 0)
+        {
+            int ectsChance = Random.Range(0, ectsRatio);
+            if (ectsChance == 0)
+            {
+                Instantiate(ects, pos, Quaternion.identity);
+            }
+            else
+            {
+                int randPowerUp = Random.Range(0, powerUps.Count);
+                Instantiate(powerUps[randPowerUp], pos, Quaternion.identity);
+            }
+        }
 
         int randSpawn = Random.Range(0, transform.childCount);
         spawnPoint.transform.position = transform.GetChild(randSpawn).transform.position; 

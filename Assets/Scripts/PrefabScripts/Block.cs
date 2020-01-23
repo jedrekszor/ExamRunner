@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    [SerializeField] private float vel;
-    
     void Start()
     {
         
@@ -14,9 +12,9 @@ public class Block : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * vel);
+        transform.Translate(Vector3.left * Time.deltaTime * Controller.vel);
         
-        if(transform.position.x < -15)
+        if(transform.position.x < Camera.main.transform.position.x - 15)
             Destroy(gameObject);
     }
 }

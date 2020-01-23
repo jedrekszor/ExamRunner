@@ -9,8 +9,7 @@ public class PowerUp : MonoBehaviour
     public int tier;
     private float offset;
     private Session session;
-    public float vel;
-    
+
     void Start()
     {
         switch (tier)
@@ -45,7 +44,7 @@ public class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PickUp"))
         {
             session.Move(offset);
             //PICKUP SOUND but must be on player since the object is getting destroyed
@@ -55,9 +54,9 @@ public class PowerUp : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * vel);
+        transform.Translate(Vector3.left * Time.deltaTime * Controller.vel);
         
-        if(transform.position.x < -15)
+        if(transform.position.x < Camera.main.transform.position.x - 15)
             Destroy(gameObject);
     }
 }

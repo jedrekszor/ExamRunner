@@ -36,4 +36,12 @@ public class Session : MonoBehaviour
         yield return new WaitForSeconds(Mathf.Abs(dist));
         canGo = false;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Controller.Lose();
+        }
+    }
 }

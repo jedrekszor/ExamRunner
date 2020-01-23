@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ECTS : MonoBehaviour
 {
-    public float vel;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,15 +13,15 @@ public class ECTS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * vel);
+        transform.Translate(Vector3.left * Time.deltaTime * Controller.vel);
         
-        if(transform.position.x < -15)
+        if(transform.position.x < Camera.main.transform.position.x - 15)
             Destroy(gameObject);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PickUp"))
         {
             Controller.AddPoint();
             //PICKUP SOUND but must be on player since the object is getting destroyed
