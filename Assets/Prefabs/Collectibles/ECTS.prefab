@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6118914014633314377}
   - component: {fileID: 6118914014633314486}
   - component: {fileID: 6118914014633314379}
+  - component: {fileID: 133255361664316080}
   m_Layer: 0
   m_Name: ECTS
   m_TagString: Untagged
@@ -119,4 +120,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b373ad39a9a893645871b22f7495aa45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 3
+--- !u!95 &133255361664316080
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118914014633314487}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e02e1333f084aaf42bf1333f7c075ead, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
