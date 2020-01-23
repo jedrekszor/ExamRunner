@@ -147,8 +147,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9088738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.018, y: 0.821, z: 11.5}
-  m_LocalScale: {x: 1, y: 1, z: 5.924}
+  m_LocalPosition: {x: -7.18, y: 2.88, z: 11.5}
+  m_LocalScale: {x: 63.533657, y: 12.905371, z: 5.924}
   m_Children: []
   m_Father: {fileID: 1776528595}
   m_RootOrder: 1
@@ -184,7 +184,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9533db7871cf92548a05fbdd156ea1f4, type: 2}
+  - {fileID: 2100000, guid: a910b61b9d0e2924e9e04cd089dac5a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1229,8 +1229,8 @@ MonoBehaviour:
   - {fileID: 5467435223185289147, guid: b9162de4007b3ef40a5e293a715f3485, type: 3}
   ects: {fileID: 6118914014633314487, guid: b202fe714bf8fef44ac7b238c9aee594, type: 3}
   spawnPoint: {fileID: 111156002}
-  minTime: 2
-  maxTime: 5
+  minTime: 1
+  maxTime: 3
   powerUpRatio: 3
   ectsRatio: 2
 --- !u!1 &1073581469
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db055270a38457b47bb3eb2c2a344704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed1: 0.1
+  scrollSpeed1: 0.05
   scrollSpeed2: 0.2
 --- !u!1 &1799147346
 GameObject:

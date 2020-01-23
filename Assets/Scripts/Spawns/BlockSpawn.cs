@@ -28,7 +28,13 @@ public class BlockSpawn : MonoBehaviour
     {
         int rand = Random.Range(0, blocks.Count);
         GameObject inst = Instantiate(blocks[rand], spawnPoint.transform.position, Quaternion.identity);
-        Vector3 pos = new Vector3(inst.transform.position.x, inst.transform.position.y + 2, inst.transform.position.z);
+        int upOrDown = Random.Range(0, 2);
+        int of = 0;
+        if (upOrDown == 0)
+            of = 2;
+        else if (upOrDown == 1)
+            of = -2;
+        Vector3 pos = new Vector3(inst.transform.position.x, inst.transform.position.y + of, inst.transform.position.z);
         int powerUpChance = Random.Range(0, powerUpRatio);
         if (powerUpChance == 0)
         {
