@@ -348,7 +348,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b02890382e1e54798885a42253efa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 80
+  height: 150
 --- !u!95 &148768585
 Animator:
   serializedVersion: 3
@@ -775,8 +775,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.799927, y: -32.899963}
-  m_SizeDelta: {x: 61.25, y: 50}
+  m_AnchoredPosition: {x: -109.7, y: -88}
+  m_SizeDelta: {x: 143.46, y: 117.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422080882
 MonoBehaviour:
@@ -827,8 +827,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -933,8 +933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -89.5, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: -220.4, y: 5}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470786683
 MonoBehaviour:
@@ -1182,7 +1182,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.080451965, y: -2.012753}
+  m_Offset: {x: 0.01648438, y: -2.012753}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1193,7 +1193,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.781004, y: 0.529963}
+  m_Size: {x: 2.5871313, y: 0.529963}
   m_EdgeRadius: 0
 --- !u!1 &955484995
 GameObject:
@@ -1242,7 +1242,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks:
-  - {fileID: 4528424559958760234, guid: a67fc57dcd5a0864182aedb2d8087ea6, type: 3}
+  - {fileID: 6771519151158805330, guid: 63171b6c8d523844d92e17be3bb472f8, type: 3}
+  - {fileID: 8254403991101037966, guid: 268e8f41af58c504d89a201283446091, type: 3}
+  - {fileID: 2719821324214697571, guid: 52b376e6246955b44841cdb29dc30bdd, type: 3}
   spawnPoint: {fileID: 111156002}
   minTime: 2
   maxTime: 5
@@ -1717,10 +1719,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
