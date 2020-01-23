@@ -9,9 +9,7 @@ public class Session : MonoBehaviour
     private int xDir = 1;
     private int yDir = 1;
     public float vel;
-    public float velY;
-    private int cnt = 0;
-    
+
     private void Update()
     {
         if (canGo)
@@ -20,14 +18,7 @@ public class Session : MonoBehaviour
         }
         
         
-        transform.Translate(new Vector3(0, yDir, 0) * Time.deltaTime * velY);
-        if (cnt == 40)
-        {
-            cnt = 0;
-            yDir *= -1;
-        }
-
-        cnt++;
+        
     }
 
     public void Move(float dist)
