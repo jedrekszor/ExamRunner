@@ -62,7 +62,9 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Controller.cs" />
     <Compile Include="Assets\Scripts\Controllers\MenuController.cs" />
+    <Compile Include="Assets\Scripts\DistanceIndicator.cs" />
     <Compile Include="Assets\Scripts\Dust.cs" />
+    <Compile Include="Assets\Scripts\GoTo.cs" />
     <Compile Include="Assets\Scripts\Levitate.cs" />
     <Compile Include="Assets\Scripts\Paralax.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

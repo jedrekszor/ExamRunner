@@ -13,7 +13,9 @@
             <e p="Controller.cs" t="Include" />
             <e p="MenuController.cs" t="Include" />
           </e>
+          <e p="DistanceIndicator.cs" t="Include" />
           <e p="Dust.cs" t="Include" />
+          <e p="GoTo.cs" t="Include" />
           <e p="Levitate.cs" t="Include" />
           <e p="Paralax.cs" t="Include" />
           <e p="Player.cs" t="Include" />
