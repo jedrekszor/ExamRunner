@@ -12,8 +12,10 @@ public class BlockSpawn : MonoBehaviour
     public float maxTime;
     public int powerUpRatio;
     public int ectsRatio;
+    private int children;
     void Start()
     {
+        children = transform.childCount;
         StartCoroutine(Cooldown());
     }
     
@@ -26,6 +28,9 @@ public class BlockSpawn : MonoBehaviour
 
     private void spawnStuff()
     {
+        int randSpawn = Random.Range(0, children);
+//        Debug.Log(children + " " + randSpawn);
+        spawnPoint = transform.GetChild(randSpawn); 
         int rand = Random.Range(0, blocks.Count);
         GameObject inst = Instantiate(blocks[rand], spawnPoint.transform.position, Quaternion.identity);
 //        int upOrDown = Random.Range(0, 2);
@@ -50,8 +55,7 @@ public class BlockSpawn : MonoBehaviour
             }
         }
 
-        int randSpawn = Random.Range(0, transform.childCount);
-        spawnPoint.transform.position = transform.GetChild(randSpawn).transform.position; 
+        
         StartCoroutine(Cooldown());
     }
 }
