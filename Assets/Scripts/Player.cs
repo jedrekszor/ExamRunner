@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
     public void jump()
     {
-        if (canJump)
+        if (canJump && Controller.gameRunning)
         {
             animator.SetTrigger("Jump");
             rgbd.AddForce(new Vector2(0, height), ForceMode2D.Impulse);
