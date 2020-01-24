@@ -10,9 +10,8 @@ public class Player : MonoBehaviour
     private Session session;
     public GameObject dust;
     private Animator animator;
-
     [SerializeField] private float height;
-    // Start is called before the first frame update
+    
     void Start()
     {
         rgbd = GetComponent<Rigidbody2D>();
@@ -22,6 +21,10 @@ public class Player : MonoBehaviour
     
     void Update()
     {
+
+        Debug.Log(Paralax.canParalax);
+            
+        
         if (Input.GetMouseButtonDown(0))
         {
             jump();
@@ -31,6 +34,7 @@ public class Player : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.RightArrow))
             session.Move(1);
+        
     }
 
     public void jump()
@@ -45,5 +49,23 @@ public class Player : MonoBehaviour
         }
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Block"))
+        {
+//            Paralax.canParalax = false;
+            
+        }
+            
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Block"))
+        {
+//            Paralax.canParalax = true;
+            
+        }
+            
+    }
 }

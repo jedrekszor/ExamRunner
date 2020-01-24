@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4681685372442848562}
   m_Layer: 0
   m_Name: block3
-  m_TagString: Floor
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

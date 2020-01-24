@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
 {
     private static int ects = 0;
     private static TextMeshProUGUI tm;
-    public static float vel = 5;
+    public static float vel = 6;
     void Start()
     {
         tm = GameObject.Find("ECTSCounter").GetComponent<TextMeshProUGUI>();
