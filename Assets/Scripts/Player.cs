@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public static bool canJump = true;
     private Session session;
     public GameObject dust;
+    private Animator animator;
 
     [SerializeField] private float height;
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     {
         rgbd = GetComponent<Rigidbody2D>();
         session = GameObject.Find("Session").GetComponent<Session>();
+        animator = GetComponent<Animator>();
     }
     
     void Update()
@@ -35,6 +37,7 @@ public class Player : MonoBehaviour
     {
         if (canJump)
         {
+            animator.SetTrigger("Jump");
             rgbd.AddForce(new Vector2(0, height), ForceMode2D.Impulse);
             Instantiate(dust, transform.GetChild(0).position, Quaternion.identity);
             canJump = false;

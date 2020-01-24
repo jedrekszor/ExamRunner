@@ -34,7 +34,7 @@ public class BlockSpawn : MonoBehaviour
 //            of = 2;
 //        else if (upOrDown == 1)
 //            of = -2;
-        Vector3 pos = new Vector3(inst.transform.position.x, inst.transform.position.y + 2, inst.transform.position.z);
+        Vector3 pos = new Vector3(inst.transform.position.x, inst.transform.position.y + 1.5f, inst.transform.position.z);
         int powerUpChance = Random.Range(0, powerUpRatio);
         if (powerUpChance == 0)
         {
