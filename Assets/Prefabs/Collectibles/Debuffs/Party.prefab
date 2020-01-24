@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBuff: 0
-  tier: 5
+  tier: 2
 --- !u!1 &5785074764977349305
 GameObject:
   m_ObjectHideFlags: 0

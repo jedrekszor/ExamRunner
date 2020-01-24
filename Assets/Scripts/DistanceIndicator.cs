@@ -16,6 +16,6 @@ public class DistanceIndicator : MonoBehaviour
     void Update()
     {
         dist = Mathf.Abs(session.transform.position.x - player.transform.position.x) - 2.8f;
-        transform.localScale = new Vector3(dist/20, transform.localScale.y, transform.localScale.z);
+        transform.localScale = new Vector3(dist/25, transform.localScale.y, transform.localScale.z);
     }
 }

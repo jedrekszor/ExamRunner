@@ -49,23 +49,23 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Block"))
-        {
-//            Paralax.canParalax = false;
-            
-        }
-            
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Block"))
-        {
-//            Paralax.canParalax = true;
-            
-        }
-            
-    }
+//    private void OnCollisionEnter2D(Collision2D other)
+//    {
+//        if (other.gameObject.CompareTag("Block"))
+//        {
+////            Paralax.canParalax = false;
+//            
+//        }
+//            
+//    }
+//
+//    private void OnCollisionExit2D(Collision2D other)
+//    {
+//        if (other.gameObject.CompareTag("Block"))
+//        {
+////            Paralax.canParalax = true;
+//            
+//        }
+//            
+//    }
 }

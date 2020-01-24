@@ -390,7 +390,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08263254, y: 0.08479047}
+  m_Offset: {x: 0.08263254, y: 0.17365599}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -401,7 +401,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.025014, y: 4.393263}
+  m_Size: {x: 3.025014, y: 4.215532}
   m_EdgeRadius: 0
 --- !u!50 &148768581
 Rigidbody2D:
@@ -1377,7 +1377,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01648438, y: -0.67290306}
+  m_Offset: {x: -0.077608466, y: -0.6258569}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1388,7 +1388,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5871313, y: 0.27807045}
+  m_Size: {x: 2.775317, y: 0.37216282}
   m_EdgeRadius: 0
 --- !u!1 &955484995
 GameObject:
@@ -1436,15 +1436,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks:
-  - {fileID: 6771519151158805330, guid: 63171b6c8d523844d92e17be3bb472f8, type: 3}
-  - {fileID: 8254403991101037966, guid: 268e8f41af58c504d89a201283446091, type: 3}
-  - {fileID: 2719821324214697571, guid: 52b376e6246955b44841cdb29dc30bdd, type: 3}
-  powerUps:
+  - {fileID: 1828236575263103494, guid: 63171b6c8d523844d92e17be3bb472f8, type: 3}
+  - {fileID: 6073442207620913459, guid: 268e8f41af58c504d89a201283446091, type: 3}
+  - {fileID: 4722014554691862582, guid: 52b376e6246955b44841cdb29dc30bdd, type: 3}
+  - {fileID: 2769297532786909372, guid: a670cff5e84f2af438cb8eff6c411cd1, type: 3}
+  buffs:
   - {fileID: 8835476394666025140, guid: 14d0129efe08a184cbb060eadcc51d6e, type: 3}
   - {fileID: 1439009199824324253, guid: 048c353806cce794f8ddc98f8b0195c2, type: 3}
   - {fileID: 1839397009121756700, guid: 4cea88f17f19527449214290fe021a2c, type: 3}
   - {fileID: 8017507228883047026, guid: dfc7d7b256d130e45932a4e92c89ff38, type: 3}
   - {fileID: 7815353506353442353, guid: b9036020ae884144489e5325a852d14e, type: 3}
+  debuffs:
   - {fileID: 6980047742664964612, guid: 55dd1bded8912934287e33741bfcce41, type: 3}
   - {fileID: 7253684724783179650, guid: 45a9feaa8aea0944c8ffd1a5f6a6be8f, type: 3}
   - {fileID: 4153122511126338018, guid: cec7d56351445054e88a87421b1ec02f, type: 3}
@@ -2114,6 +2116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed1: 0.05
   scrollSpeed2: 0.15
+  scrollSpeed1temp: 0
+  scrollSpeed2temp: 0
 --- !u!1 &1799147346
 GameObject:
   m_ObjectHideFlags: 0
