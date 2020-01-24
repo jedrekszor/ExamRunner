@@ -7,16 +7,16 @@ public class Paralax : MonoBehaviour
     private GameObject bg;
     private GameObject layer1;
     private GameObject layer2;
+    private GameObject layer3;
 
     private Renderer layer1Rend;
     private Renderer layer2Rend;
+    private Renderer layer3Rend;
 
     public float scrollSpeed1;
     public float scrollSpeed2;
+    public float scrollSpeed3;
     
-    public float scrollSpeed1temp;
-    public float scrollSpeed2temp;
-
     public static bool canParalax = true;
     // Start is called before the first frame update
     void Start()
@@ -24,13 +24,13 @@ public class Paralax : MonoBehaviour
         bg = transform.GetChild(0).gameObject;
         layer1 = transform.GetChild(1).gameObject;
         layer2 = transform.GetChild(2).gameObject;
+        layer3 = transform.GetChild(3).gameObject;
 
         layer1Rend = layer1.GetComponent<Renderer>();
         layer2Rend = layer2.GetComponent<Renderer>();
-        Debug.Log(layer1Rend.name);
+        layer3Rend = layer3.GetComponent<Renderer>();
 
-        scrollSpeed1temp = scrollSpeed1;
-        scrollSpeed2temp = scrollSpeed2;
+      
     }
     
     void Update()
@@ -46,9 +46,11 @@ public class Paralax : MonoBehaviour
 
         Vector2 offset1 = new Vector2(Time.time * scrollSpeed1, 0);
         Vector2 offset2 = new Vector2(Time.time * scrollSpeed2, 0);
+        Vector2 offset3 = new Vector2(Time.time * scrollSpeed3, 0);
     
         layer1Rend.material.mainTextureOffset = offset1;
         layer2Rend.material.mainTextureOffset = offset2;
+        layer3Rend.material.mainTextureOffset = offset3;
         
         
     }

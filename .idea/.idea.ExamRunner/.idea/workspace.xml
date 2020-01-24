@@ -3,34 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="4038df73-d8a6-4fdc-879d-81952d808a78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamRunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamRunner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Buffs/EnergyDrink.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Buffs/EnergyDrink.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Buffs/Notes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Buffs/Notes.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Buffs/StackOverflow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Buffs/StackOverflow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Buffs/Tutorials.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Buffs/Tutorials.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/AlarmClock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/AlarmClock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/FailedExam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/FailedExam.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/Games.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/Games.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/Party.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/Party.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/Phone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collectibles/Debuffs/Phone.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PrefabScripts/PowerUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PrefabScripts/PowerUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Paralax.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Paralax.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/backgound/interpolation/pavement.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/backgound/interpolation/pavement.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/57d878-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/57d878-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/512c11-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/512c11-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/04/048c353806cce794f8ddc98f8b0195c2" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/04/048c353806cce794f8ddc98f8b0195c2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/0a/0acc924bf7eb5b148bfdfb9063092a18" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/0a/0acc924bf7eb5b148bfdfb9063092a18" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/45/45a9feaa8aea0944c8ffd1a5f6a6be8f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/45/45a9feaa8aea0944c8ffd1a5f6a6be8f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/4c/4cea88f17f19527449214290fe021a2c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/4c/4cea88f17f19527449214290fe021a2c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/55/55dd1bded8912934287e33741bfcce41" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/55/55dd1bded8912934287e33741bfcce41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/72/72f009f094ffccb489c1e4d7136731ba" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/72/72f009f094ffccb489c1e4d7136731ba" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/b9/b9036020ae884144489e5325a852d14e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/b9/b9036020ae884144489e5325a852d14e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/b9/b9162de4007b3ef40a5e293a715f3485" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/b9/b9162de4007b3ef40a5e293a715f3485" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ce/cec7d56351445054e88a87421b1ec02f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ce/cec7d56351445054e88a87421b1ec02f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/df/dfc7d7b256d130e45932a4e92c89ff38" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/df/dfc7d7b256d130e45932a4e92c89ff38" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/16/166a107d5c2153348ab8a4a8dcd2a1e7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/16/166a107d5c2153348ab8a4a8dcd2a1e7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/16/166a107d5c2153348ab8a4a8dcd2a1e7.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/16/166a107d5c2153348ab8a4a8dcd2a1e7.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/8e/8e22bdaa549c998428f04046672d9d2e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/8e/8e22bdaa549c998428f04046672d9d2e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/8e/8e22bdaa549c998428f04046672d9d2e.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/8e/8e22bdaa549c998428f04046672d9d2e.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/db/db055270a38457b47bb3eb2c2a344704" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/db/db055270a38457b47bb3eb2c2a344704" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,17 +57,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Paralax.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+            <state relative-caret-position="626">
+              <caret line="50" column="56" lean-forward="true" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
               <folding>
-                <marker date="1579879210085" expanded="false" signature="6:78" ph="..." />
-                <marker date="1579879210085" expanded="true" signature="116:1436" ph="{...}" />
-                <marker date="1579879210085" expanded="true" signature="525:914" ph="{...}" />
-                <marker date="1579879210085" expanded="true" signature="937:1434" ph="{...}" />
-                <marker date="1579879210085" expanded="true" signature="944:1154" ph="/* scrollSpeed1 = 0; ... */" />
+                <marker date="1579883002184" expanded="false" signature="6:78" ph="..." />
+                <marker date="1579883002184" expanded="true" signature="116:1579" ph="{...}" />
+                <marker date="1579883002184" expanded="true" signature="549:932" ph="{...}" />
+                <marker date="1579883002184" expanded="true" signature="955:1577" ph="{...}" />
+                <marker date="1579883002184" expanded="true" signature="962:1172" ph="/* scrollSpeed1 = 0; ... */" />
               </folding>
             </state>
           </provider>
@@ -167,7 +151,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrefabScripts/PowerUp.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="362">
-              <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+              <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
               <folding>
                 <marker date="1579882343057" expanded="false" signature="6:92" ph="..." />
                 <marker date="1579882343057" expanded="true" signature="130:2906" ph="{...}" />
@@ -183,11 +167,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PickUpText.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding>
                 <marker date="1579882523274" expanded="false" signature="6:105" ph="..." />
                 <marker date="1579882523274" expanded="true" signature="146:539" ph="{...}" />
@@ -261,12 +245,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Dust.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PrefabScripts/Block.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Paralax.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DistanceIndicator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawns/BlockSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PrefabScripts/PowerUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickUpText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Paralax.cs" />
       </list>
     </option>
   </component>
@@ -383,12 +367,12 @@
       <workItem from="1579522278075" duration="8696000" />
       <workItem from="1579533127393" duration="1424000" />
       <workItem from="1579706327241" duration="3346000" />
-      <workItem from="1579710515008" duration="26249000" />
+      <workItem from="1579710515008" duration="27157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40482000" />
+    <option name="totallyTimeSpent" value="41390000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,20 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Paralax.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
-          <folding>
-            <marker date="1579879210085" expanded="false" signature="6:78" ph="..." />
-            <marker date="1579879210085" expanded="true" signature="116:1436" ph="{...}" />
-            <marker date="1579879210085" expanded="true" signature="525:914" ph="{...}" />
-            <marker date="1579879210085" expanded="true" signature="937:1434" ph="{...}" />
-            <marker date="1579879210085" expanded="true" signature="944:1154" ph="/* scrollSpeed1 = 0; ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="670">
@@ -726,7 +696,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrefabScripts/PowerUp.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
-          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+          <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
             <marker date="1579882343057" expanded="false" signature="6:92" ph="..." />
             <marker date="1579882343057" expanded="true" signature="130:2906" ph="{...}" />
@@ -744,13 +714,27 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PickUpText.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
             <marker date="1579882523274" expanded="false" signature="6:105" ph="..." />
             <marker date="1579882523274" expanded="true" signature="146:539" ph="{...}" />
             <marker date="1579882523274" expanded="true" signature="210:268" ph="{...}" />
             <marker date="1579882523274" expanded="true" signature="306:381" ph="{...}" />
             <marker date="1579882523274" expanded="true" signature="427:537" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Paralax.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="50" column="56" lean-forward="true" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
+          <folding>
+            <marker date="1579883002184" expanded="false" signature="6:78" ph="..." />
+            <marker date="1579883002184" expanded="true" signature="116:1579" ph="{...}" />
+            <marker date="1579883002184" expanded="true" signature="549:932" ph="{...}" />
+            <marker date="1579883002184" expanded="true" signature="955:1577" ph="{...}" />
+            <marker date="1579883002184" expanded="true" signature="962:1172" ph="/* scrollSpeed1 = 0; ... */" />
           </folding>
         </state>
       </provider>
