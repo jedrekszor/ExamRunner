@@ -201,3 +201,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBuff: 1
   tier: 4
+  type: 2

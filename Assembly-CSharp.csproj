@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\GoTo.cs" />
     <Compile Include="Assets\Scripts\Levitate.cs" />
     <Compile Include="Assets\Scripts\Paralax.cs" />
+    <Compile Include="Assets\Scripts\PickUpText.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerCollider.cs" />
     <Compile Include="Assets\Scripts\PrefabScripts\Block.cs" />

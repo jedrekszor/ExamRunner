@@ -19,6 +19,7 @@
           <e p="GoTo.cs" t="Include" />
           <e p="Levitate.cs" t="Include" />
           <e p="Paralax.cs" t="Include" />
+          <e p="PickUpText.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerCollider.cs" t="Include" />
           <e p="PrefabScripts" t="Include">

@@ -9,6 +9,21 @@ public class PowerUp : MonoBehaviour
     public int tier;
     private float offset;
     private Session session;
+    public enum item
+    {
+        Coffee,
+        Drink,
+        Notes,
+        Stack,
+        Tutorials,
+        Clock,
+        Exam,
+        Games,
+        Party,
+        Phone
+    }
+    public item type;
+    private PickUpText pickUpText;
 
     void Start()
     {
@@ -40,6 +55,7 @@ public class PowerUp : MonoBehaviour
             offset *= -1;
 
         session = GameObject.Find("Session").GetComponent<Session>();
+        pickUpText = GameObject.Find("PickUpText").GetComponent<PickUpText>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -48,6 +64,42 @@ public class PowerUp : MonoBehaviour
         {
             session.Move(offset);
             //PICKUP SOUND but must be on player since the object is getting destroyed
+
+            switch (type)
+            {
+                case item.Coffee:
+                    pickUpText.SetText("coffee");
+                    break;
+                case item.Drink:
+                    pickUpText.SetText("drink");
+                    break;
+                case item.Notes:
+                    pickUpText.SetText("notes");
+                    break;
+                case item.Stack:
+                    pickUpText.SetText("stack overflow");
+                    break;
+                case item.Tutorials:
+                    pickUpText.SetText("hindi tutorials");
+                    break;
+                case item.Clock:
+                    pickUpText.SetText("you're late");
+                    break;
+                case item.Exam:
+                    pickUpText.SetText("failed exam");
+                    break;
+                case item.Games:
+                    pickUpText.SetText("games");
+                    break;
+                case item.Party:
+                    pickUpText.SetText("overpartied");
+                    break;
+                case item.Phone:
+                    pickUpText.SetText("phone");
+                    break;
+            }
+            
+            
             Destroy(gameObject);
         }
     }
