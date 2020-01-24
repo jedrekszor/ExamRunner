@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraController.cs" t="Include" />
+          <e p="CoinScaler.cs" t="Include" />
           <e p="Controllers" t="Include">
             <e p="Controller.cs" t="Include" />
             <e p="MenuController.cs" t="Include" />

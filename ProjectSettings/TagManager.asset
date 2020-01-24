@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - PickUp
+  - CoinPicker
   layers:
   - Default
   - TransparentFX
