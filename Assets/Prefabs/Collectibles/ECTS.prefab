@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b373ad39a9a893645871b22f7495aa45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin: {fileID: 8300000, guid: 091a10e0a1c9ed64487b9c8664e0a67b, type: 3}
 --- !u!95 &133255361664316080
 Animator:
   serializedVersion: 3

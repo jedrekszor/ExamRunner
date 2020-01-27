@@ -8,10 +8,14 @@ public class ECTS : MonoBehaviour
     private Vector2 dir;
     private bool picked = false;
     private CoinScaler ects;
+    private Controller controller;
+    public AudioClip coin;
+    
     void Start()
     {
         flyPoint = GameObject.Find("CoinDisappear").transform;
         ects = GameObject.Find("Coin").GetComponent<CoinScaler>();
+        controller = GameObject.Find("!CONTROLLER").GetComponent<Controller>();
     }
 
     // Update is called once per frame
@@ -35,14 +39,13 @@ public class ECTS : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
-            
             startFlying();
-            //PICKUP SOUND but must be on player since the object is getting destroyed
-//            Destroy(gameObject);
+            
         }
         else if (other.gameObject.CompareTag("CoinPicker"))
         {
-            Controller.AddPoint();
+            AudioManager.PlaySound(coin);
+            controller.AddPoint();
             Destroy(gameObject);
             ects.Rescale();
         }
