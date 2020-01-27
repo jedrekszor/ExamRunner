@@ -9,7 +9,7 @@ public class Controller : MonoBehaviour
 {
     private int ects = 0;
     private TextMeshProUGUI tm;
-    public static float vel = 7.5f;
+    public static float vel = 6f;
     public static bool gameRunning;
     private GameObject startScreen;
     private GameObject loseScreen;
