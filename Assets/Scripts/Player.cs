@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-
+        Debug.Log(canJump);
         if (Input.GetMouseButtonDown(0))
         {
             jump();
