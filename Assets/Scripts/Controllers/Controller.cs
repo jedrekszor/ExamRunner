@@ -10,20 +10,21 @@ public class Controller : MonoBehaviour
     private int ects = 0;
     private TextMeshProUGUI tm;
     public static float vel = 7.5f;
-    public static bool gameRunning = false;
+    public static bool gameRunning;
     private GameObject startScreen;
     private GameObject loseScreen;
     private GameObject winScreen;
+    private GameObject screens;
     public static bool firstTime = true;
 
     public AudioClip mainTheme;
     public AudioClip loseTheme;
     public AudioClip winTheme;
-    public AudioClip menuTheme;
-    
+
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        screens = GameObject.Find("Screens");
         startScreen = GameObject.Find("StartScreen");
         loseScreen = GameObject.Find("LoseScreen");
         winScreen = GameObject.Find("WinScreen");
@@ -33,11 +34,6 @@ public class Controller : MonoBehaviour
         loseScreen.SetActive(false);
         winScreen.SetActive(false);
         Time.timeScale = 0;
-    }
-
-    private void Update()
-    {
-        throw new NotImplementedException();
     }
 
     public void AddPoint()
@@ -54,6 +50,12 @@ public class Controller : MonoBehaviour
 
     public void Win()
     {
+        if (winScreen == null)
+        {
+            screens = GameObject.Find("Screens");
+            winScreen = screens.transform.GetChild(2).gameObject;
+        }
+
         winScreen.SetActive(true);
         Time.timeScale = 0;
         AudioManager.PlaySoundtrack(winTheme);
@@ -62,6 +64,12 @@ public class Controller : MonoBehaviour
 
     public void Lose()
     {
+        if(loseScreen == null)
+        {
+            screens = GameObject.Find("Screens");
+            loseScreen = screens.transform.GetChild(1).gameObject;
+        }
+        
         loseScreen.SetActive(true);
         Time.timeScale = 0;
         AudioManager.PlaySoundtrack(loseTheme);
@@ -70,11 +78,19 @@ public class Controller : MonoBehaviour
 
     public void Play()
     {
+        if(startScreen == null)
+        {
+            screens = GameObject.Find("Screens");
+            startScreen = screens.transform.GetChild(0).gameObject;
+        }
+        
         startScreen.SetActive(false);
         Time.timeScale = 1;
         gameRunning = true;
         AudioManager.PlaySoundtrack(mainTheme);
     }
+
+    
 
     public void Replay()
     {
@@ -84,15 +100,16 @@ public class Controller : MonoBehaviour
         SceneManager.LoadScene(scene.name);
         Time.timeScale = 1;
         AudioManager.PlaySoundtrack(mainTheme);
-        ects = 0;
+        Destroy(gameObject);
     }
 
     public void GoToMenu()
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
-        AudioManager.PlaySoundtrack(mainTheme);
         firstTime = true;
         gameRunning = false;
+        Destroy(GameObject.Find("AudioManager"));
+        Destroy(gameObject);
     }
 }
