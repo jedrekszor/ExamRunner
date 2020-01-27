@@ -123,6 +123,7 @@ MonoBehaviour:
   isBuff: 0
   tier: 3
   type: 5
+  pickedUpSound: {fileID: 8300000, guid: 8e8602c864148ff43b41677b55ae1bb8, type: 3}
 --- !u!1 &9134277193871472750
 GameObject:
   m_ObjectHideFlags: 0

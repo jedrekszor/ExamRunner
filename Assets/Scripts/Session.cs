@@ -9,6 +9,13 @@ public class Session : MonoBehaviour
     private int xDir = 1;
     private int yDir = 1;
     public float vel;
+    private Controller controller;
+
+
+    private void Start()
+    {
+        controller = GameObject.Find("!CONTROLLER").GetComponent<Controller>();
+    }
 
     private void Update()
     {
@@ -41,7 +48,7 @@ public class Session : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Controller.Lose();
+            controller.Lose();
         }
     }
 }

@@ -25,6 +25,8 @@ public class PowerUp : MonoBehaviour
     public item type;
     private PickUpText pickUpText;
 
+    public AudioClip pickedUpSound;
+
     void Start()
     {
         switch (tier)
@@ -62,6 +64,7 @@ public class PowerUp : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
+            AudioManager.PlaySound(pickedUpSound);
             session.Move(offset);
             //PICKUP SOUND but must be on player since the object is getting destroyed
 

@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public GameObject dust;
     private Animator animator;
     [SerializeField] private float height;
+
+    public AudioClip jumpSound;
     
     void Start()
     {
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
     {
         if (canJump && Controller.gameRunning)
         {
+            AudioManager.PlaySound(jumpSound);
             animator.SetTrigger("Jump");
             rgbd.AddForce(new Vector2(0, height), ForceMode2D.Impulse);
             Instantiate(dust, transform.GetChild(0).position, Quaternion.identity);

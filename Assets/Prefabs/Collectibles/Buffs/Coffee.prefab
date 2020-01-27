@@ -201,3 +201,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBuff: 1
   tier: 4
+  type: 0
+  pickedUpSound: {fileID: 8300000, guid: f03f15dfab237c34baab09d00e5e1a09, type: 3}
