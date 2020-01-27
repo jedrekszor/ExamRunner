@@ -86,7 +86,7 @@ public class PowerUp : MonoBehaviour
                     pickUpText.SetText("Hindi YouTube tutorial");
                     break;
                 case item.Clock:
-                    pickUpText.SetText("Oversleeping the first term");
+                    pickUpText.SetText("Oversleeping for the exam");
                     break;
                 case item.Exam:
                     pickUpText.SetText("Another almost passed exam");

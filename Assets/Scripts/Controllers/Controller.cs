@@ -30,7 +30,11 @@ public class Controller : MonoBehaviour
         winScreen = GameObject.Find("WinScreen");
         tm = GameObject.Find("ECTSCounter").GetComponent<TextMeshProUGUI>();
         
-        
+        if(startScreen == null)
+        {
+            screens = GameObject.Find("Screens");
+            startScreen = screens.transform.GetChild(0).gameObject;
+        }
         loseScreen.SetActive(false);
         winScreen.SetActive(false);
         Time.timeScale = 0;
@@ -78,11 +82,7 @@ public class Controller : MonoBehaviour
 
     public void Play()
     {
-        if(startScreen == null)
-        {
-            screens = GameObject.Find("Screens");
-            startScreen = screens.transform.GetChild(0).gameObject;
-        }
+        
         
         startScreen.SetActive(false);
         Time.timeScale = 1;
