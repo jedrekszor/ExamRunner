@@ -8,5 +8,6 @@ public class MenuController : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("Main");
+        Time.timeScale = 0;
     }
 }

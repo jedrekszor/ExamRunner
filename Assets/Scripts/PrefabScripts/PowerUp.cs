@@ -71,34 +71,34 @@ public class PowerUp : MonoBehaviour
             switch (type)
             {
                 case item.Coffee:
-                    pickUpText.SetText("coffee");
+                    pickUpText.SetText("Got hyped by strong coffee");
                     break;
                 case item.Drink:
-                    pickUpText.SetText("drink");
+                    pickUpText.SetText("Boosted by energy drink");
                     break;
                 case item.Notes:
-                    pickUpText.SetText("notes");
+                    pickUpText.SetText("Older students' useful notes");
                     break;
                 case item.Stack:
-                    pickUpText.SetText("stack overflow");
+                    pickUpText.SetText("Solution to problem on StackOverflow");
                     break;
                 case item.Tutorials:
-                    pickUpText.SetText("hindi tutorials");
+                    pickUpText.SetText("Hindi YouTube tutorial");
                     break;
                 case item.Clock:
-                    pickUpText.SetText("you're late");
+                    pickUpText.SetText("Oversleeping the first term");
                     break;
                 case item.Exam:
-                    pickUpText.SetText("failed exam");
+                    pickUpText.SetText("Another almost passed exam");
                     break;
                 case item.Games:
-                    pickUpText.SetText("games");
+                    pickUpText.SetText("The boys are online");
                     break;
                 case item.Party:
-                    pickUpText.SetText("overpartied");
+                    pickUpText.SetText("Party in dorm VII");
                     break;
                 case item.Phone:
-                    pickUpText.SetText("phone");
+                    pickUpText.SetText("Those unstoppable notifications");
                     break;
             }
             

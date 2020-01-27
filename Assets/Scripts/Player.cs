@@ -24,9 +24,6 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(Paralax.canParalax);
-            
-        
         if (Input.GetMouseButtonDown(0))
         {
             jump();
