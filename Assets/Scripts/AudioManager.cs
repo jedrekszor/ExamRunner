@@ -26,4 +26,9 @@ public class AudioManager : MonoBehaviour
         soundtrack = transform.GetChild(0).gameObject.GetComponent<AudioSource>();
         sounds = transform.GetChild(1).gameObject.GetComponent<AudioSource>();
     }
+
+    public static void StopSoundtrack()
+    {
+        soundtrack.Stop();
+    }
 }

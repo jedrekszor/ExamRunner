@@ -21,11 +21,13 @@ public class Controller : MonoBehaviour
     public static bool firstTime = true;
     public bool canPause = false;
     public float time;
+    private GameObject pausePanel;
 
     public AudioClip mainTheme;
     public AudioClip loseTheme;
-    public AudioClip winTheme;
+    public AudioClip tada;
     public AudioClip yeet;
+    public AudioClip click;
 
     void Start()
     {
@@ -38,6 +40,7 @@ public class Controller : MonoBehaviour
         pauseScreen = GameObject.Find("PauseScreen");
         stats = GameObject.Find("Stats");
         tm = GameObject.Find("ECTSCounter").GetComponent<TextMeshProUGUI>();
+        pausePanel = GameObject.Find("MainCanvas").transform.GetChild(3).gameObject;
         
         if(startScreen == null)
         {
@@ -48,10 +51,12 @@ public class Controller : MonoBehaviour
         almostWinScreen.SetActive(false);
         winScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        pausePanel.SetActive(false);
         stats.SetActive(false);
         Time.timeScale = 0;
 
-        ects = 29;    //DEBUG
+//        ects = 29;    //DEBUG
+//        PlayerPrefs.SetFloat("HighScore", 0f);
         tm.text = ects + "/30";
         
     }
@@ -78,7 +83,8 @@ public class Controller : MonoBehaviour
 
         winScreen.SetActive(true);
         Time.timeScale = 0;
-        AudioManager.PlaySoundtrack(winTheme);
+        AudioManager.StopSoundtrack();
+        AudioManager.PlaySound(tada);
         gameRunning = false;
         canPause = false;
         SetStats(true);
@@ -125,6 +131,7 @@ public class Controller : MonoBehaviour
         gameRunning = true;
         AudioManager.PlaySoundtrack(mainTheme);
         canPause = true;
+        stats.transform.GetChild(3).gameObject.SetActive(false);
     }
 
     
@@ -137,6 +144,7 @@ public class Controller : MonoBehaviour
         SceneManager.LoadScene(scene.name);
         Time.timeScale = 1;
         AudioManager.PlaySoundtrack(mainTheme);
+        stats.transform.GetChild(3).gameObject.SetActive(false);
         Destroy(gameObject);
     }
 
@@ -152,13 +160,15 @@ public class Controller : MonoBehaviour
 
     public void Pause()
     {
-        if (pauseScreen == null)
+        if (pauseScreen == null || pausePanel == null)
         {
             screens = GameObject.Find("Screens");
             pauseScreen = screens.transform.GetChild(4).gameObject;
+            pausePanel = GameObject.Find("MainCanvas").transform.GetChild(3).gameObject;
         }
         Time.timeScale = 0;
         gameRunning = false;
+        pausePanel.SetActive(true);
         pauseScreen.SetActive(true);
     }
 
@@ -168,10 +178,12 @@ public class Controller : MonoBehaviour
         {
             screens = GameObject.Find("Screens");
             pauseScreen = screens.transform.GetChild(4).gameObject;
+            pausePanel = GameObject.Find("MainCanvas").transform.GetChild(3).gameObject;
         }
         Time.timeScale = 1;
         gameRunning = true;
         pauseScreen.SetActive(false);
+        pausePanel.SetActive(false);
     }
 
     private void SetStats(bool win)
@@ -181,9 +193,10 @@ public class Controller : MonoBehaviour
             stats = GameObject.Find("MainCanvas").transform.GetChild(4).gameObject;
         }
 
+        String timeS = setTime();
         stats.SetActive(true);
         stats.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = ects + "/30";
-        stats.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "Your time: " + time.ToString("F2");
+        stats.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "Your time: " + timeS;
         if ((time < PlayerPrefs.GetFloat("HighScore") || PlayerPrefs.GetFloat("HighScore") == 0f) && win)
         {
             PlayerPrefs.SetFloat("HighScore", time);
@@ -191,7 +204,17 @@ public class Controller : MonoBehaviour
             AudioManager.PlaySound(yeet);
         }
         stats.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "High score: " + PlayerPrefs.GetFloat("HighScore").ToString("F2");
+    }
 
-        
+    private String setTime()
+    {
+        int min = (int)time / 60;
+        float sec = time - (min * 60);
+        return min + ":" + sec;
+    }
+
+    public void OnClickSound()
+    {
+        AudioManager.PlaySound(click);
     }
 }

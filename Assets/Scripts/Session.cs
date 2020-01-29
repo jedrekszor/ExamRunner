@@ -10,11 +10,13 @@ public class Session : MonoBehaviour
     private int yDir = 1;
     public float vel;
     private Controller controller;
+    private GameObject player;
 
 
     private void Start()
     {
         controller = GameObject.Find("!CONTROLLER").GetComponent<Controller>();
+        player = GameObject.Find("Player");
     }
 
     private void Update()
@@ -30,12 +32,15 @@ public class Session : MonoBehaviour
 
     public void Move(float dist)
     {
-        xDir = 1;
-        if (dist < 0)
-            xDir = -1;
+        if ((dist < 0 && Mathf.Abs(transform.position.x - player.transform.position.x) < 40) || dist > 0)
+        {
+            xDir = 1;
+            if (dist < 0)
+                xDir = -1;
 
-        canGo = true;
-        StartCoroutine(Cooldown(dist));
+            canGo = true;
+            StartCoroutine(Cooldown(dist));
+        }
     }
 
     private IEnumerator Cooldown(float dist)
