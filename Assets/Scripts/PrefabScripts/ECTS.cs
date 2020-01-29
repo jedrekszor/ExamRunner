@@ -39,12 +39,13 @@ public class ECTS : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
+            AudioManager.PlaySound(coin);
             startFlying();
             
         }
         else if (other.gameObject.CompareTag("CoinPicker"))
         {
-            AudioManager.PlaySound(coin);
+            
             controller.AddPoint();
             Destroy(gameObject);
             ects.Rescale();

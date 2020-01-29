@@ -202,4 +202,4 @@ MonoBehaviour:
   isBuff: 1
   tier: 4
   type: 3
-  pickedUpSound: {fileID: 8300000, guid: ed75edf4c7f7eea44b7337455ffe5564, type: 3}
+  pickedUpSound: {fileID: 8300000, guid: cee727f5ce64adc4cb867038ab469862, type: 3}

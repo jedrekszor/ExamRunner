@@ -14,8 +14,10 @@ public class Controller : MonoBehaviour
     private GameObject startScreen;
     private GameObject loseScreen;
     private GameObject winScreen;
+    private GameObject pauseScreen;
     private GameObject screens;
     public static bool firstTime = true;
+    public bool canPause = false;
 
     public AudioClip mainTheme;
     public AudioClip loseTheme;
@@ -28,6 +30,7 @@ public class Controller : MonoBehaviour
         startScreen = GameObject.Find("StartScreen");
         loseScreen = GameObject.Find("LoseScreen");
         winScreen = GameObject.Find("WinScreen");
+        pauseScreen = GameObject.Find("PauseScreen");
         tm = GameObject.Find("ECTSCounter").GetComponent<TextMeshProUGUI>();
         
         if(startScreen == null)
@@ -37,6 +40,7 @@ public class Controller : MonoBehaviour
         }
         loseScreen.SetActive(false);
         winScreen.SetActive(false);
+        pauseScreen.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -64,6 +68,7 @@ public class Controller : MonoBehaviour
         Time.timeScale = 0;
         AudioManager.PlaySoundtrack(winTheme);
         gameRunning = false;
+        canPause = false;
     }
 
     public void Lose()
@@ -78,16 +83,16 @@ public class Controller : MonoBehaviour
         Time.timeScale = 0;
         AudioManager.PlaySoundtrack(loseTheme);
         gameRunning = false;
+        canPause = false;
     }
 
     public void Play()
     {
-        
-        
         startScreen.SetActive(false);
         Time.timeScale = 1;
         gameRunning = true;
         AudioManager.PlaySoundtrack(mainTheme);
+        canPause = true;
     }
 
     
@@ -111,5 +116,29 @@ public class Controller : MonoBehaviour
         gameRunning = false;
         Destroy(GameObject.Find("AudioManager"));
         Destroy(gameObject);
+    }
+
+    public void Pause()
+    {
+        if (pauseScreen == null)
+        {
+            screens = GameObject.Find("Screens");
+            pauseScreen = screens.transform.GetChild(3).gameObject;
+        }
+        Time.timeScale = 0;
+        gameRunning = false;
+        pauseScreen.SetActive(true);
+    }
+
+    public void Unpause()
+    {
+        if (pauseScreen == null)
+        {
+            screens = GameObject.Find("Screens");
+            pauseScreen = screens.transform.GetChild(3).gameObject;
+        }
+        Time.timeScale = 1;
+        gameRunning = true;
+        pauseScreen.SetActive(false);
     }
 }
