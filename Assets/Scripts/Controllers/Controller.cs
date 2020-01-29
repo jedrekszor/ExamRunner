@@ -13,15 +13,19 @@ public class Controller : MonoBehaviour
     public static bool gameRunning;
     private GameObject startScreen;
     private GameObject loseScreen;
+    private GameObject almostWinScreen;
     private GameObject winScreen;
     private GameObject pauseScreen;
     private GameObject screens;
+    private GameObject stats;
     public static bool firstTime = true;
     public bool canPause = false;
+    public float time;
 
     public AudioClip mainTheme;
     public AudioClip loseTheme;
     public AudioClip winTheme;
+    public AudioClip yeet;
 
     void Start()
     {
@@ -30,7 +34,9 @@ public class Controller : MonoBehaviour
         startScreen = GameObject.Find("StartScreen");
         loseScreen = GameObject.Find("LoseScreen");
         winScreen = GameObject.Find("WinScreen");
+        almostWinScreen = GameObject.Find("AlmostWinScreen");
         pauseScreen = GameObject.Find("PauseScreen");
+        stats = GameObject.Find("Stats");
         tm = GameObject.Find("ECTSCounter").GetComponent<TextMeshProUGUI>();
         
         if(startScreen == null)
@@ -39,9 +45,15 @@ public class Controller : MonoBehaviour
             startScreen = screens.transform.GetChild(0).gameObject;
         }
         loseScreen.SetActive(false);
+        almostWinScreen.SetActive(false);
         winScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        stats.SetActive(false);
         Time.timeScale = 0;
+
+        ects = 29;    //DEBUG
+        tm.text = ects + "/30";
+        
     }
 
     public void AddPoint()
@@ -61,7 +73,7 @@ public class Controller : MonoBehaviour
         if (winScreen == null)
         {
             screens = GameObject.Find("Screens");
-            winScreen = screens.transform.GetChild(2).gameObject;
+            winScreen = screens.transform.GetChild(3).gameObject;
         }
 
         winScreen.SetActive(true);
@@ -69,17 +81,37 @@ public class Controller : MonoBehaviour
         AudioManager.PlaySoundtrack(winTheme);
         gameRunning = false;
         canPause = false;
+        SetStats(true);
+    }
+
+    private void Update()
+    {
+        if(gameRunning)
+            time += Time.deltaTime;
     }
 
     public void Lose()
     {
-        if(loseScreen == null)
+        if (ects < 18)
         {
-            screens = GameObject.Find("Screens");
-            loseScreen = screens.transform.GetChild(1).gameObject;
+            if(loseScreen == null)
+            {
+                screens = GameObject.Find("Screens");
+                loseScreen = screens.transform.GetChild(1).gameObject;
+            }
+            loseScreen.SetActive(true);
+        }
+        else
+        {
+            if(almostWinScreen == null)
+            {
+                screens = GameObject.Find("Screens");
+                almostWinScreen = screens.transform.GetChild(2).gameObject;
+            }
+            almostWinScreen.SetActive(true);
         }
         
-        loseScreen.SetActive(true);
+        SetStats(false);
         Time.timeScale = 0;
         AudioManager.PlaySoundtrack(loseTheme);
         gameRunning = false;
@@ -123,7 +155,7 @@ public class Controller : MonoBehaviour
         if (pauseScreen == null)
         {
             screens = GameObject.Find("Screens");
-            pauseScreen = screens.transform.GetChild(3).gameObject;
+            pauseScreen = screens.transform.GetChild(4).gameObject;
         }
         Time.timeScale = 0;
         gameRunning = false;
@@ -135,10 +167,31 @@ public class Controller : MonoBehaviour
         if (pauseScreen == null)
         {
             screens = GameObject.Find("Screens");
-            pauseScreen = screens.transform.GetChild(3).gameObject;
+            pauseScreen = screens.transform.GetChild(4).gameObject;
         }
         Time.timeScale = 1;
         gameRunning = true;
         pauseScreen.SetActive(false);
+    }
+
+    private void SetStats(bool win)
+    {
+        if (stats == null)
+        {
+            stats = GameObject.Find("MainCanvas").transform.GetChild(4).gameObject;
+        }
+
+        stats.SetActive(true);
+        stats.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = ects + "/30";
+        stats.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "Your time: " + time.ToString("F2");
+        if ((time < PlayerPrefs.GetFloat("HighScore") || PlayerPrefs.GetFloat("HighScore") == 0f) && win)
+        {
+            PlayerPrefs.SetFloat("HighScore", time);
+            stats.transform.GetChild(3).gameObject.SetActive(true);
+            AudioManager.PlaySound(yeet);
+        }
+        stats.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "High score: " + PlayerPrefs.GetFloat("HighScore").ToString("F2");
+
+        
     }
 }
