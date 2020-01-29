@@ -210,7 +210,7 @@ public class Controller : MonoBehaviour
     {
         int min = (int)time / 60;
         float sec = time - (min * 60);
-        return min + ":" + sec;
+        return min + ":" + sec.ToString("F2");
     }
 
     public void OnClickSound()
