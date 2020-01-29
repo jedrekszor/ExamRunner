@@ -51,7 +51,7 @@ public class Controller : MonoBehaviour
         stats.SetActive(false);
         Time.timeScale = 0;
 
-//        ects = 29;    //DEBUG
+        ects = 29;    //DEBUG
         tm.text = ects + "/30";
         
     }
