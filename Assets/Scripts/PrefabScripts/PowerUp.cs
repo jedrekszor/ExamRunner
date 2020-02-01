@@ -77,16 +77,16 @@ public class PowerUp : MonoBehaviour
                     pickUpText.SetText("Boosted by energy drink");
                     break;
                 case item.Notes:
-                    pickUpText.SetText("Older students' useful notes");
+                    pickUpText.SetText("Older students' notes");
                     break;
                 case item.Stack:
-                    pickUpText.SetText("Solution to problem on StackOverflow");
+                    pickUpText.SetText("Solution on StackOverflow");
                     break;
                 case item.Tutorials:
                     pickUpText.SetText("Hindi YouTube tutorial");
                     break;
                 case item.Clock:
-                    pickUpText.SetText("Oversleeping for the exam");
+                    pickUpText.SetText("Overslept for the exam");
                     break;
                 case item.Exam:
                     pickUpText.SetText("Another almost passed exam");

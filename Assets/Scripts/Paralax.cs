@@ -18,6 +18,8 @@ public class Paralax : MonoBehaviour
     public float scrollSpeed3;
     
     public static bool canParalax = true;
+
+    private float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,18 +37,12 @@ public class Paralax : MonoBehaviour
     
     void Update()
     {
-//        scrollSpeed1 = 0;
-//        scrollSpeed2 = 0;
-//        
-//        if (canParalax)
-//        {
-//            scrollSpeed1 = scrollSpeed1temp;
-//            scrollSpeed2 = scrollSpeed2temp;
-//        }
+        if(canParalax)
+            timer += Time.deltaTime;
 
-        Vector2 offset1 = new Vector2(Time.time * scrollSpeed1, 0);
-        Vector2 offset2 = new Vector2(Time.time * scrollSpeed2, 0);
-        Vector2 offset3 = new Vector2(Time.time * scrollSpeed3, 0);
+        Vector2 offset1 = new Vector2(timer * scrollSpeed1, 0);
+        Vector2 offset2 = new Vector2(timer * scrollSpeed2, 0);
+        Vector2 offset3 = new Vector2(timer * scrollSpeed3, 0);
     
         layer1Rend.material.mainTextureOffset = offset1;
         layer2Rend.material.mainTextureOffset = offset2;

@@ -193,7 +193,8 @@ public class Controller : MonoBehaviour
             stats = GameObject.Find("MainCanvas").transform.GetChild(4).gameObject;
         }
 
-        String timeS = setTime();
+        String timeS = setTime(time);
+        
         stats.SetActive(true);
         stats.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = ects + "/30";
         stats.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "Your time: " + timeS;
@@ -203,14 +204,19 @@ public class Controller : MonoBehaviour
             stats.transform.GetChild(3).gameObject.SetActive(true);
             AudioManager.PlaySound(yeet);
         }
-        stats.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "High score: " + PlayerPrefs.GetFloat("HighScore").ToString("F2");
+        else
+        {
+            stats.transform.GetChild(3).gameObject.SetActive(false);
+        }
+        String timeH = setTime(PlayerPrefs.GetFloat("HighScore"));
+        stats.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "High score: " + timeH;
     }
 
-    private String setTime()
+    private String setTime(float t)
     {
-        int min = (int)time / 60;
-        float sec = time - (min * 60);
-        return min + ":" + sec.ToString("F2");
+        int min = (int)t / 60;
+        int sec = (int)t - (min * 60);
+        return min + ":" + sec.ToString();
     }
 
     public void OnClickSound()

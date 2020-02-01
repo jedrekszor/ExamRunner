@@ -286,7 +286,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.038930893, y: 0.09141457}
+  m_Offset: {x: -0.065311074, y: 0.09141445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -297,7 +297,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.073782, y: 4.279564}
+  m_Size: {x: 1.7547524, y: 4.279564}
   m_EdgeRadius: 0
 --- !u!1 &148768579
 GameObject:
@@ -333,7 +333,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04450357, y: 0.17365599}
+  m_Offset: {x: 0.008597016, y: 0.17365599}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -344,7 +344,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2243016, y: 4.215532}
+  m_Size: {x: 1.6375883, y: 4.215532}
   m_EdgeRadius: 0
 --- !u!50 &148768581
 Rigidbody2D:
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 1793293960129528293, guid: 7ca84dcb6ec66bb4eb90da1e6cb2b9da, type: 3}
-  height: 165
+  height: 160
   jumpSound: {fileID: 8300000, guid: 253c51d8a172966489c7a104777189d5, type: 3}
 --- !u!95 &148768585
 Animator:
@@ -2520,8 +2520,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2637,7 +2637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952391423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 148768583}
@@ -2668,7 +2668,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04450357, y: -0.5636239}
+  m_Offset: {x: 0.008597016, y: -0.5636239}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2679,7 +2679,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.224302, y: 0.49662876}
+  m_Size: {x: 1.637588, y: 0.49662876}
   m_EdgeRadius: 0
 --- !u!1 &955484995
 GameObject:
@@ -2994,8 +2994,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3251,8 +3251,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3906,7 +3906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484243792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.23, y: 0.3, z: -0.7914691}
+  m_LocalPosition: {x: -27.23, y: 0.3, z: -2.5}
   m_LocalScale: {x: -0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6090,7 +6090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978669432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.19, y: -4.227, z: 9}
+  m_LocalPosition: {x: -2.19, y: -4.227, z: 10}
   m_LocalScale: {x: 30.401537, y: 2.225424, z: 1}
   m_Children:
   - {fileID: 767696292}

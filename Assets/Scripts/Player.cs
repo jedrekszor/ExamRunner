@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private Session session;
     public GameObject dust;
     private Animator animator;
+    private float current;
+    private float previous;
     [SerializeField] private float height;
 
     public AudioClip jumpSound;
@@ -19,10 +21,21 @@ public class Player : MonoBehaviour
         rgbd = GetComponent<Rigidbody2D>();
         session = GameObject.Find("Session").GetComponent<Session>();
         animator = GetComponent<Animator>();
+        current = transform.position.x;
+        previous = transform.position.x;
     }
     
     void Update()
     {
+        previous = current;
+        current = transform.position.x;
+        if (current < previous)
+            Paralax.canParalax = false;
+        else
+            Paralax.canParalax = true;
+        
+        
+        
         Debug.Log(canJump);
         if (Input.GetMouseButtonDown(0))
         {
